@@ -1,0 +1,10 @@
+dotenv
+langchain-core
+langgraph
+pydantic_ai
+dataclasses
+fastapi
+uvicorn
+motor
+pymongo
+openai
