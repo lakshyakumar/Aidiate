@@ -1,3 +1,4 @@
+pymongo
 dotenv
 langchain-core
 langgraph
@@ -6,5 +7,4 @@ dataclasses
 fastapi
 uvicorn
 motor
-pymongo
 openai

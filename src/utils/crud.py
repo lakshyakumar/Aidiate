@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from .ai_utils import EmbeddingClass
 
-from ..types.types import IdeaModelWithScore, StageEnum
+from ..type.type import IdeaModelWithScore, StageEnum
 
 T = TypeVar("T", bound=BaseModel)
 

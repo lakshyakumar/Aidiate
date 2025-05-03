@@ -1,4 +1,4 @@
-from ..types.common import MongoState
+from ..type.common import MongoState
 from .nodes.mongo_node import init_node, mongo_node
 from langgraph.graph import END, START, StateGraph
 from langchain_core.messages import  AIMessage, HumanMessage

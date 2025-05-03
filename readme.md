@@ -26,7 +26,7 @@ Aidiate is a lightweight, AI-powered service designed to assist with idea genera
 │   ├── graph/          # Graph-based workflow logic
 │   ├── models/         # Database models
 │   ├── routes/         # API routes
-│   ├── types/          # Type definitions
+│   ├── type/          # Type definitions
 │   └── utils/          # Utility functions
 ```
 

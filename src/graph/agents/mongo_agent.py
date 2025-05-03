@@ -1,8 +1,8 @@
 from pydantic_ai import Agent, RunContext
 from typing import Any, Dict, List, Optional
 
-from ...types.types import IdeaModelCRUDType
-from ...types.common import EmailDependency
+from ...type.type import IdeaModelCRUDType
+from ...type.common import EmailDependency
 import os
 
 

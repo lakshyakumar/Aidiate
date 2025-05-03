@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 from uuid import UUID
 
-from ..types.types import IdeaModelCRUDType, IdeaUpdateModel
+from ..type.type import IdeaModelCRUDType, IdeaUpdateModel
 from ..utils.crud import MongoCRUD
 from ..models.idea_db_model import IdeaModel
 from bson import ObjectId
