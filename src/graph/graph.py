@@ -1,5 +1,6 @@
 from ..type.common import MongoState
-from .nodes.mongo_node import init_node, mongo_node
+from ..type.type import CrudOperation
+from .nodes.mongo_node import init_node, mongo_get_node, mongo_create_node, mongo_query_node_selector
 from langgraph.graph import END, START, StateGraph
 from langchain_core.messages import  AIMessage, HumanMessage
 
@@ -11,12 +12,16 @@ class GraphBuilder:
 
         # Add all the nodes
         self.graph_builder.add_node("init_node", init_node)
-        self.graph_builder.add_node("mongo_node", mongo_node)
+        self.graph_builder.add_node(str(CrudOperation.READ), mongo_get_node)
+        self.graph_builder.add_node(str(CrudOperation.CREATE), mongo_create_node)
+        self.graph_builder.add_node("query_selector", mongo_query_node_selector)
 
         # Add the edges
         self.graph_builder.add_edge(START, "init_node")
-        self.graph_builder.add_edge("init_node", "mongo_node")
-        self.graph_builder.add_edge("mongo_node", END)
+        self.graph_builder.add_edge("init_node", "query_selector")
+        self.graph_builder.add_conditional_edges("query_selector", lambda state: state["query_type"], {str(CrudOperation.CREATE), str(CrudOperation.READ)})
+        self.graph_builder.add_edge(str(CrudOperation.CREATE), END)
+        self.graph_builder.add_edge(str(CrudOperation.READ), END)
 
     def compile(self):
         """

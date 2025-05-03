@@ -25,6 +25,7 @@ class MongoState(TypedDict):
     ideas: list
     crud: MongoCRUD
     query: str
+    query_type: str
     messages: Annotated[list, add_messages]
 
 # Define our state

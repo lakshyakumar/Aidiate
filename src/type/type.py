@@ -3,6 +3,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from ..utils.ai_utils import EmbeddingClass
 from pydantic import BaseModel, EmailStr
+from enum import Enum
 
 class StageEnum(str, Enum):
     idea = "idea"
@@ -43,3 +44,10 @@ class IdeaModelWithScore:
 class IdeaUpdateModel(BaseModel):
     details: Optional[Dict[str, Any]] = None  # Use a dictionary for structured data
     stage: Optional[str] = None
+    
+
+class CrudOperation(Enum):
+    CREATE = "Create_idea"
+    READ = "Get_Ideas"
+    UPDATE = "Update_Idea"
+    DELETE = "Delete_Idea"
