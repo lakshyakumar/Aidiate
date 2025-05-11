@@ -2,8 +2,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
-from src.routes.aidiate import router as aidiate_router
-from src.routes.ideas_db import router as ideas_db_router
+from app.src.routes.aidiate import router as aidiate_router
+from app.src.routes.ideas_db import router as ideas_db_router
 
 # Create FastAPI app instance
 app = FastAPI(title="Aidiate Agent", description="Your Own AI Lean-Stack Service", version="1.0.0")

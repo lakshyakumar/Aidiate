@@ -2,9 +2,11 @@ pymongo
 dotenv
 langchain-core
 langgraph
+pydantic[email]
 pydantic_ai
 dataclasses
 fastapi
 uvicorn
 motor
 openai
+uvicorn

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Any, Dict, List, Optional
-from ..utils.ai_utils import EmbeddingClass
+from app.src.utils.ai_utils import EmbeddingClass
 from pydantic import BaseModel, EmailStr
 from enum import Enum
 
