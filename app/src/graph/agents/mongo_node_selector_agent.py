@@ -1,11 +1,6 @@
-from pydantic_ai import Agent, RunContext
-from typing import Any, Dict, List, Optional
-
-from ...type.type import IdeaModelCRUDType, CrudOperation
-from ...type.common import EmailDependency
 import os
-
-
+from pydantic_ai import Agent
+from app.src.type.type import CrudOperation
 
 query_selector_agent = Agent(
     os.getenv("MODEL"),

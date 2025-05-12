@@ -1,5 +1,5 @@
 from fastapi import APIRouter , Query
-from ..graph.graph import GraphBuilder
+from app.src.graph.graph import GraphBuilder
 
 # Create a router instance
 router = APIRouter()

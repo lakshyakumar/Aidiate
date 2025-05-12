@@ -3,7 +3,7 @@ from typing_extensions import TypedDict
 from langgraph.graph.message import add_messages
 from dataclasses import dataclass
 
-from ..utils.crud import MongoCRUD
+from app.src.utils.crud import MongoCRUD
 
 @dataclass
 class RouletteWheelGuessDeps:

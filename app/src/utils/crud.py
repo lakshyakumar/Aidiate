@@ -4,9 +4,9 @@ from bson import ObjectId
 from typing import Type, TypeVar, Generic
 from pydantic import BaseModel
 
-from .ai_utils import EmbeddingClass
+from app.src.utils.ai_utils import EmbeddingClass
 
-from ..type.type import IdeaModelWithScore, StageEnum
+from app.src.type.type import IdeaModelWithScore, StageEnum
 
 T = TypeVar("T", bound=BaseModel)
 

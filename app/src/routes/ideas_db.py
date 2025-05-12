@@ -5,9 +5,9 @@ from pydantic import BaseModel
 from typing import List, Optional
 from uuid import UUID
 
-from ..type.type import IdeaModelCRUDType, IdeaUpdateModel
-from ..utils.crud import MongoCRUD
-from ..models.idea_db_model import IdeaModel
+from app.src.type.type import IdeaModelCRUDType, IdeaUpdateModel
+from app.src.utils.crud import MongoCRUD
+from app.src.models.idea_db_model import IdeaModel
 from bson import ObjectId
 
 db_url = os.getenv("MONGO_URI")
